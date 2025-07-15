@@ -1,0 +1,15 @@
+{
+  "name": "@vastreach/block-contactfield",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "dependencies": {
+    "react": "^18",
+    "zod": "^3",
+    "@form-shared": "*"
+  },
+  "scripts": {
+    "build": "tsup src/index.tsx --format esm,cjs --dts"
+  }
+}

@@ -10,6 +10,10 @@ import { Image, ImagePropsSchema } from '@usewaypoint/block-image';
 import { Spacer, SpacerPropsSchema } from '@usewaypoint/block-spacer';
 import { Text, TextPropsSchema } from '@usewaypoint/block-text';
 import {
+  ContactField,
+  ContactFieldPropsSchema,
+} from '@vastreach/block-contactfield';
+import {
   buildBlockComponent,
   buildBlockConfigurationDictionary,
   buildBlockConfigurationSchema,
@@ -37,6 +41,14 @@ const EDITOR_DICTIONARY = buildBlockConfigurationDictionary({
     Component: (props) => (
       <EditorBlockWrapper>
         <Button {...props} />
+      </EditorBlockWrapper>
+    ),
+  },
+  ContactField: {
+    schema: ContactFieldPropsSchema,
+    Component: (props) => (
+      <EditorBlockWrapper>
+        <ContactField {...props} />
       </EditorBlockWrapper>
     ),
   },
